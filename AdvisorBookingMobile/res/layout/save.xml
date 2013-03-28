@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20sp" >
+
+    <TextView
+        android:id="@+id/button1_label"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dip"
+        android:text="Fill Information"
+        android:textSize="24.5sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="First Name:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/First_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="34dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Name:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/Last_Name"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:ems="10" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Number:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/student_number"
+        android:layout_width="fill_parent"
+        android:layout_height="34dp"
+        android:ems="10" />
+<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Courses:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/courses"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:ems="10" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Telephone Number:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/telephone_number"
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:ems="10" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Email ID:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/email_Id"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:ems="10" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:textSize="14.5sp" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.11"
+        android:ems="10" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.08"
+        android:orientation="horizontal"
+        android:paddingLeft="20sp" >
+
+        <Button
+            android:id="@+id/Button01add"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20sp"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/Button01home"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20sp"
+            android:text="Back" />
+
+    </LinearLayout>
+
+</LinearLayout>
