@@ -10,13 +10,13 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class SaveData extends Activity implements OnClickListener {  
 	private DataManipulator dh;     
 	static final int DIALOG_ID = 0;
 
+	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.save);
@@ -26,6 +26,7 @@ public class SaveData extends Activity implements OnClickListener {
 		home.setOnClickListener(this);           
 	}
 
+	@Override
 	@SuppressWarnings("deprecation")
 	public void onClick(View v){
 		switch(v.getId()){
@@ -36,13 +37,13 @@ public class SaveData extends Activity implements OnClickListener {
 			break;
 
 		case R.id.Button01add:
-			View editText1 = (EditText) findViewById(R.id.First_Name);
-			View editText2 = (EditText) findViewById(R.id.Last_Name);
-			View editText3 = (EditText) findViewById(R.id.student_number);
-			View editText4 = (EditText) findViewById(R.id.courses);
-			View editText5 = (EditText) findViewById(R.id.telephone_number);
-			View editText6 = (EditText) findViewById(R.id.email_Id);
-			View editText7 = (EditText) findViewById(R.id.address);	
+			View editText1 = findViewById(R.id.First_Name);
+			View editText2 = findViewById(R.id.Last_Name);
+			View editText3 = findViewById(R.id.student_number);
+			View editText4 = findViewById(R.id.courses);
+			View editText5 = findViewById(R.id.telephone_number);
+			View editText6 = findViewById(R.id.email_Id);
+			View editText7 = findViewById(R.id.address);	
 			String myEditText1=((TextView) editText1).getText().toString();
 			String myEditText2=((TextView) editText2).getText().toString();
 			String myEditText3=((TextView) editText3).getText().toString();
@@ -58,6 +59,7 @@ public class SaveData extends Activity implements OnClickListener {
 
 		}
 	}  
+	@Override
 	protected final Dialog onCreateDialog(final int id) {
 		Dialog dialog = null;
 		switch(id) {
@@ -66,12 +68,14 @@ public class SaveData extends Activity implements OnClickListener {
 			builder.setMessage("Information saved successfully ! Add Another Info?")
 			.setCancelable(false)
 			.setPositiveButton("No", new DialogInterface.OnClickListener() {
+				@Override
 				public void onClick(DialogInterface dialog, int id) {
 					SaveData.this.finish();
 
               }
 			})
 			.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+				@Override
 				public void onClick(DialogInterface dialog, int id) {
 					dialog.cancel();
 				}

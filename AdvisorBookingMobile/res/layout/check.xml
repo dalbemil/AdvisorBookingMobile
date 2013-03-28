@@ -7,7 +7,7 @@ android:layout_height="fill_parent" >
 android:id="@+id/selection2"
 android:layout_width="fill_parent"
 android:layout_height="wrap_content"
-android:text="FIRST NAME - FAST NAME -STUDENT ID -COURSES -TELPHONE NO - EMAIL ID- ADDRESS"
+android:text="FIRST NAME-LAST NAME-STUDENT ID-COURSES-TELPHONE NO-EMAIL ID- ADDRESS"
 />
 <TextView
 android:id="@+id/selection"

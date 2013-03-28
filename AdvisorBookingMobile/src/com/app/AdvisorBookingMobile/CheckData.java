@@ -19,6 +19,7 @@ public class CheckData extends ListActivity  {
 	List<String[]> list = new ArrayList<String[]>();
 	List<String[]> names2 =null ;
 	String[] stg1;
+	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.check);
@@ -46,6 +47,7 @@ public class CheckData extends ListActivity  {
 
 	}      
 
+	@Override
 	public void onListItemClick(ListView parent, View v, int position, long id) {
 		selection.setText(stg1[position]);
 	}

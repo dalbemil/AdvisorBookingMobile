@@ -19,7 +19,7 @@ public class DataManipulator {
 	private SQLiteStatement insertStmt;
 	
     private static final String INSERT = "insert into "
-		+ TABLE_NAME + " (First_Name,Last_Name,student_number,courses,telephone_number,email_Id,address) values (?,?,?,?)";
+		+ TABLE_NAME + " (First_Name,Last_Name,student_number,courses,telephone_number,email_Id,address) values (?,?,?,?,?,?,?)";
 
 	public DataManipulator(Context context) {
 		DataManipulator.context = context;
@@ -47,13 +47,13 @@ public class DataManipulator {
 	{
 
 		List<String[]> list = new ArrayList<String[]>();
-		Cursor cursor = db.query(TABLE_NAME, new String[] { "id","First_name","Last_name","student_number","courses","telephone_number","email_Id","address" },
-				null, null, null, null, "name asc"); 
+		Cursor cursor = db.query(TABLE_NAME, new String[] {"First_name","Last_name","student_number","courses","telephone_number","email_Id","address" },
+				null, null, null, null, null); 
 
 		int x=0;
 		if (cursor.moveToFirst()) {
 			do {
-				String[] b1=new String[]{cursor.getString(0),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4)};
+				String[] b1=new String[]{cursor.getString(0),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6)};
 
 				list.add(b1);
 
@@ -83,7 +83,7 @@ public class DataManipulator {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			db.execSQL("CREATE TABLE " + TABLE_NAME + " (id INTEGER PRIMARY KEY, name TEXT, number TEXT, skypeId TEXT, address TEXT)");
+			db.execSQL("CREATE TABLE " + TABLE_NAME + " (id INTEGER PRIMARY KEY, First_name TEXT, Last_name TEXT, student_number TEXT, courses TEXT, telephone_number TEXT, email_Id TEXT, address TEXT)");
 		}
 
 		@Override
