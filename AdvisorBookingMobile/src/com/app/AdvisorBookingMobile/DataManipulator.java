@@ -83,7 +83,7 @@ public class DataManipulator {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			db.execSQL("CREATE TABLE " + TABLE_NAME + " (id INTEGER PRIMARY KEY, First_name TEXT, Last_name TEXT, student_number TEXT, courses TEXT, telephone_number TEXT, email_Id TEXT, address TEXT)");
+			db.execSQL("CREATE TABLE " + TABLE_NAME + " (student_number TEXT PRIMARY KEY, First_name TEXT, Last_name TEXT,courses TEXT, telephone_number TEXT, email_Id TEXT, address TEXT)");
 		}
 
 		@Override
